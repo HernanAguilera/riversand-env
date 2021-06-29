@@ -1,0 +1,14 @@
+version: "3.1"
+
+services: 
+    code:
+        # image: hernanaguilera/riversand:0.0.1
+        build: .
+        volumes: 
+            - ./code:/code
+        networks: 
+            - riversand_network
+        tty: true
+networks:
+    riversand_network:
+        driver: bridge
